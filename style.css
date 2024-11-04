@@ -1,0 +1,48 @@
+canvas {
+	background: #FEEDEE;
+}
+
+.heart {
+	background-color: red;
+	display: inline-block;
+	height: 16px;
+	margin: 0 10px;
+	margin-top: 20px;
+	position: relative;
+	top: 0;
+	transform: rotate(-45deg);
+	width: 16px;
+}
+
+
+.heart:before,.heart:after {
+	content: "";
+	background-color: red;
+	border-radius: 50%;
+	height: 16px;
+	position: absolute;
+	width: 15px;
+}
+
+.heart:before {
+	top: -8px;
+	left: 0;
+}
+
+
+.heart:after {
+	left:  8px;
+	top: 0;
+}
+
+@keyframes Lostlife {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+
+.endHeart { 
+	animation-name: Lostlife;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.1s;
+}
